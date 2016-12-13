@@ -1,0 +1,49 @@
+<!-- Start header  -->
+<header id="mu-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="mu-header-area">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <div class="mu-header-top-left">
+                <div class="mu-top-email">
+                  <i class="fa fa-envelope"></i>
+                  <span>info@markups.io</span>
+                </div>
+                <div class="mu-top-phone">
+                  <i class="fa fa-phone"></i>
+                  <span>012.67.63.16.59</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <div class="mu-header-top-right">
+                <nav>
+                  <ul class="mu-top-social-nav">
+                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                    <% if user_signed_in? %>
+                    <li><%= link_to "admin", admin_admin_index_path %></li>
+                    <li>
+                <%= link_to "Log out", destroy_user_session_path,class: "fa fa-sign-out",
+                  method: :delete %>
+              </li>
+                    <% else %>
+                    <li><%= link_to "Login", "#login", "data-toggle" => "modal", "data-target" => "#login-modal", :class => 'btn btn-small' %></li>
+          <li><%= link_to "Sign up", "#sign_up", "data-toggle" => "modal","data-target" => "#signup-modal", :class => 'btn btn-small' %></li>
+<% end %>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End header  -->
