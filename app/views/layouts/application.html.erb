@@ -7,8 +7,9 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
     <%= csrf_meta_tags %>
     <script type="text/javascript"> $(function ()
-
-{ $("#myModal").modal({show:false }); </script>
+{
+  $("#myModal").modal({show:false });
+}); </script>
   </head>
   <body>
     <!--START SCROLL TOP BUTTON -->
@@ -18,15 +19,10 @@
   <!-- END SCROLL TOP BUTTON -->
     <%= render "layouts/header" %>
     <%= render "layouts/menu" %>
-    <%= render "layouts/slider" %>
     <%= render "staticpage/login_modal" %>
     <%= render "staticpage/sign_up_modal" %>
     <%= yield %>
-    <%= render "layouts/service" %>
-    <%= render "layouts/features" %>
-    <%= render "layouts/course" %>
-    <%= render "layouts/teacher" %>
-    <%= render "layouts/testimonial" %>
+
     <%= render "layouts/footer" %>
   </body>
 </html>
